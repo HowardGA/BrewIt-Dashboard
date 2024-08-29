@@ -1,0 +1,56 @@
+/* Topper.css */
+
+.topper {
+    background-color: #DBC8AC;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .topper.collapsed {
+    display: none;
+  }
+  
+  .topper .MuiTypography-root {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 20px;
+  }
+  
+  .topper .MuiTypography-colorTextPrimary {
+    color: #000; /* Set the desired text color */
+  }
+  
+  .topper .MuiIconButton-root {
+    padding: 8px;
+  }
+  
+  .topper .topper-item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .topper .topper-item.active {
+    background-color: #fff; /* Set the background color for the active item */
+  }
+  
+  .topper .topper-item a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .topper .topper-item a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Add any other custom styles you need for the topper */
+  
