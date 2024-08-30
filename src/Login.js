@@ -31,7 +31,6 @@ const Login = ({ setIsLoggedIn }) => {
 
     try {
       const response = await axios.post(LOGIN_URL, { name: user, password: pwd });
-      const accessToken = response.data.accessToken;  // Assuming the token is returned in the response
       const username = response.data.username;
       const response2 = await axios.get(PHONE_URL+username);
       const phone = response2.data._id;

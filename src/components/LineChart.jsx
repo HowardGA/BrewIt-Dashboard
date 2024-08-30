@@ -9,6 +9,18 @@ const LineChart = () => {
 
   const userId = phone ||"6648531588";
 
+  useEffect(() => {
+    fetchData(); // Fetch data initially
+
+    const interval = setInterval(() => {
+      fetchData(); // Fetch data at specified interval (every 1 minute)
+    }, 10000);
+
+    return () => {
+      clearInterval(interval); // Clean up the interval on component unmount
+    };
+  }, []);
+
   const fetchData = () => {
     // Replace this with the actual API endpoint to fetch the data
     fetch(`https://brewiy-back.vercel.app/api/users/${userId}`)
@@ -32,17 +44,7 @@ const LineChart = () => {
       });
   };
 
-  useEffect(() => {
-    fetchData(); // Fetch data initially
-
-    const interval = setInterval(() => {
-      fetchData(); // Fetch data at specified interval (every 1 minute)
-    }, 10000);
-
-    return () => {
-      clearInterval(interval); // Clean up the interval on component unmount
-    };
-  }, []);
+ 
 
   const chartOptions = {
     chart: {

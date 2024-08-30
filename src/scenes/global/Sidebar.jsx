@@ -11,7 +11,6 @@ import { tokens } from '../../theme';
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
   return (
     <div
       className={`topper-item ${selected === title ? 'active' : ''}`}

@@ -11,15 +11,12 @@ import CheckList from "@mui/icons-material/Checklist";
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 import Countdown from "../../components/CountDown";
 import DurationComp from "../../components/duration";
-import { UserContext } from '../../context/UserContext';
-import { useLocation } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 
 
 
 const Dashboard = () => {
   const { phone } = useParams();
-  let refreshTimer = false;
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const degreeSymbol = "\u00B0";
@@ -38,7 +35,7 @@ const Dashboard = () => {
   const [ingredients, setIngredients] = useState('');
   const phone2 = localStorage.getItem("accessToken");
   
-  const userId = phone || phone2;
+  const userId = phone2; // phone ||
 
 
   useEffect(() => {

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
-import Sidebar from "./scenes/global/Sidebar";
 import Dashboard from "./scenes/dashboard/index";
 import History from "./scenes/history/index";
 import Login from "./Login";
@@ -15,7 +14,6 @@ import Navbar from "./scenes/global/Topbar";  // Update with the correct path
 
 function App() {
   const [theme, colorMode] = useMode();
-  const [isSidebar, setIsSidebar] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {

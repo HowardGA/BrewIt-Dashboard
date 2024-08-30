@@ -32,7 +32,6 @@ const Register = () => {
 
   const [email, setEmail] = useState('');
   const [validEmail, setValidEmail] = useState(false);
-  const [emailFocus, setEmailFocus] = useState(false);
 
   const [birthdate, setBirthdate] = useState('');
 

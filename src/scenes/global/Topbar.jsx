@@ -1,9 +1,7 @@
 import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ColorModeContext } from "../../theme";  // Update with correct path
 
 const Navbar = ({ setIsLoggedIn }) => {
-  const colorMode = useContext(ColorModeContext);
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -22,7 +20,7 @@ const Navbar = ({ setIsLoggedIn }) => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <a className="navbar-brand" to="/" style={{ color: "black" }}>
+        <a className="navbar-brand"  style={{ color: "black" }}>
           Brew It!
         </a>
         <button

@@ -6,7 +6,7 @@ const DurationComp = () => {
 
 
   // Replace 'userId' with the actual user ID you want to fetch
-  const userId = phone || "6648531588";
+  const userId = phone; //|| "6648531588"
 
   useEffect(() => {
     const fetchUserData = async () => {
